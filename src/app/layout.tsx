@@ -1,5 +1,6 @@
 import { Inter, Playfair_Display } from "next/font/google";
 import type { Metadata, Viewport } from "next";
+import { FloatingContact } from "@/components/ui/FloatingContact";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,39 +14,32 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://tanuja-vankalas.com"), // Placeholder domain
+    metadataBase: new URL("https://tanujavankalas.in"),
     alternates: {
-        canonical: "/",
+        canonical: "https://tanujavankalas.in",
     },
     title: {
-        default: "Tanuja Vankalas | Marathi & Hindi Actress",
+        default: "Tanuja Vankalas | Marathi & Hindi Television Actress",
         template: "%s | Tanuja Vankalas",
     },
-    description: "Professional Marathi and Hindi actress based in Thane with television experience including Shubh Shravanii, Tu Anolkhi Tari Sobati, and other serials.",
-    keywords: ["Tanuja Vankalas", "Actress", "Marathi Actress", "Hindi Actress", "Thane", "Mumbai", "Portfolio", "Casting", "Indian Television"],
+    description: "Tanuja Vankalas is a Marathi and Hindi television actress based in Thane with on-screen experience in serials including Shubh Shravanii and other Marathi productions.",
+    keywords: ["Tanuja Vankalas", "Actress", "Marathi Actress", "Hindi Actress", "Thane", "Mumbai", "Portfolio", "Casting", "Indian Television", "Shubh Shravanii"],
     authors: [{ name: "Tanuja Vankalas" }],
     creator: "Tanuja Vankalas",
     openGraph: {
         type: "website",
         locale: "en_IN",
-        url: "https://tanuja-vankalas.com",
+        url: "https://tanujavankalas.in",
         title: "Tanuja Vankalas | Professional Actress Portfolio",
-        description: "Emerging Marathi and Hindi television actress based in Thane. View showreel, gallery, and casting details.",
+        description: "Marathi and Hindi television actress based in Thane. View showreel, gallery, and casting details.",
         siteName: "Tanuja Vankalas Portfolio",
-        images: [
-            {
-                url: "/images/hero-placeholder.svg", // Replace with actual og-image
-                width: 1200,
-                height: 630,
-                alt: "Tanuja Vankalas - Actress Portfolio",
-            },
-        ],
+        // images: Handled by opengraph-image.tsx automatically
     },
     twitter: {
         card: "summary_large_image",
         title: "Tanuja Vankalas | Marathi & Hindi Actress",
         description: "Professional actress based in Thane. View portfolio and showreel.",
-        images: ["/images/hero-placeholder.svg"], // Replace with actual image
+        // images: Handled by opengraph-image.tsx automatically
     },
     robots: {
         index: true,
@@ -83,17 +77,18 @@ export default function RootLayout({
                             "@context": "https://schema.org",
                             "@type": "Person",
                             name: "Tanuja Vankalas",
-                            jobTitle: "Actress",
-                            url: "https://tanuja-vankalas.com",
-                            image: "https://tanuja-vankalas.com/images/hero-placeholder.svg",
+                            jobTitle: "Television Actress",
+                            url: "https://tanujavankalas.in",
+                            // Image handled by default OG or added specifically here if needed
+                            email: "mailto:tanujavanakals@gmail.com",
+                            telephone: "+917030776499",
                             address: {
                                 "@type": "PostalAddress",
                                 addressLocality: "Thane",
-                                addressRegion: "Maharashtra",
-                                addressCountry: "IN",
+                                addressCountry: "India"
                             },
                             sameAs: [
-                                "https://instagram.com/your_handle", // Replace with actual
+                                "https://www.instagram.com/tanuu_0318"
                             ],
                             worksFor: {
                                 "@type": "Organization",
@@ -103,6 +98,7 @@ export default function RootLayout({
                     }}
                 />
                 {children}
+                <FloatingContact />
             </body>
         </html>
     );
