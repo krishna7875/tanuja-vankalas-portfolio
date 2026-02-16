@@ -16,13 +16,13 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 
 const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
     ({ className, level = 1, family = "sans", children, ...props }, ref) => {
-        const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+        const Tag = `h${level}` as React.ElementType;
 
         // Default to Inter (sans), user can override to Playfair (serif)
         const baseStyles = "text-foreground tracking-tight";
         const familyStyles = family === "serif" ? "font-serif" : "font-sans";
 
-        const sizeStyles = {
+        const sizeStyles: Record<number, string> = {
             1: "text-4xl md:text-6xl font-semibold",
             2: "text-3xl md:text-4xl font-semibold",
             3: "text-xl md:text-2xl font-medium",

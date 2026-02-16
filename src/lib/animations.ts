@@ -33,3 +33,5 @@ export const fade: Variants = {
         }
     }
 };
+
+export const stagger = container;
