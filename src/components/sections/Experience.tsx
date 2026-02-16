@@ -15,24 +15,6 @@ export function Experience() {
                     {/* Left Column: Bio & Experience */}
                     <div className="lg:col-span-7 space-y-12">
 
-                        {/* Bio Section */}
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={reveal}
-                        >
-                            <SectionHeading title="About" className="mb-6" />
-                            <Text variant="large" className="text-xl md:text-2xl leading-relaxed text-balance text-neutral-800">
-                                Emerging Marathi and Hindi television actress based in Thane with professional acting training and on-screen experience.
-                            </Text>
-                            <Text className="mt-4 text-neutral-600">
-                                Dedicated to the craft of storytelling, I bring authenticity and emotional depth to every role.
-                                With a strong foundation in dramatic performance and a disciplined approach to character work,
-                                I am constantly evolving as an artist in the vibrant world of Indian television.
-                            </Text>
-                        </motion.div>
-
                         {/* Experience Timeline */}
                         <motion.div
                             initial="hidden"
@@ -40,9 +22,9 @@ export function Experience() {
                             viewport={{ once: true }}
                             variants={stagger}
                         >
-                            <Heading level={3} className="mb-6 font-serif">Television Experience</Heading>
+                            <SectionHeading title="Work History" className="mb-8" />
 
-                            <div className="space-y-6 border-l-2 border-neutral-200 pl-6 ml-2">
+                            <div className="space-y-8 border-l-2 border-neutral-200 pl-8 ml-2">
                                 {/* Item 1 */}
                                 <motion.div variants={reveal} className="relative">
                                     <div className="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-accent ring-4 ring-white" />
@@ -94,30 +76,6 @@ export function Experience() {
                                         {skill}
                                     </span>
                                 ))}
-                            </div>
-                        </motion.div>
-
-                        {/* Languages */}
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={reveal}
-                        >
-                            <Heading level={3} className="mb-6 font-serif">Languages</Heading>
-                            <div className="space-y-4">
-                                <div className="flex items-center justify-between border-b border-neutral-200 pb-3">
-                                    <span className="font-medium text-neutral-800">Marathi</span>
-                                    <span className="text-accent text-sm font-medium">Fluent (Native)</span>
-                                </div>
-                                <div className="flex items-center justify-between border-b border-neutral-200 pb-3">
-                                    <span className="font-medium text-neutral-800">Hindi</span>
-                                    <span className="text-accent text-sm font-medium">Fluent</span>
-                                </div>
-                                <div className="flex items-center justify-between border-b border-neutral-200 pb-3">
-                                    <span className="font-medium text-neutral-800">English</span>
-                                    <span className="text-neutral-500 text-sm">Conversational</span>
-                                </div>
                             </div>
                         </motion.div>
 
