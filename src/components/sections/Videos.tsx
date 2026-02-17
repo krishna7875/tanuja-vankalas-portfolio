@@ -83,6 +83,7 @@ export function Videos() {
             </Container>
 
             <VideoModal
+                key={selectedVideo?.id}
                 video={selectedVideo}
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}

@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 
 const navLinks = [
-    { name: "About", href: "#about" },
     { name: "Gallery", href: "#gallery" },
     { name: "Videos", href: "#videos" },
     { name: "Experience", href: "#experience" },

@@ -87,6 +87,8 @@ export default function RootLayout({
                                 addressLocality: "Thane",
                                 addressCountry: "India"
                             },
+                            height: "5'5\"",
+                            knowsLanguage: ["Marathi", "Hindi", "English"],
                             sameAs: [
                                 "https://www.instagram.com/tanuu_0318"
                             ],

@@ -1,7 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { Gallery } from "@/components/sections/Gallery";
 import { Videos } from "@/components/sections/Videos";
-import { About } from "@/components/sections/About";
+
 import { Contact } from "@/components/sections/Contact";
 import { Experience } from "@/components/sections/Experience";
 import { Navbar } from "@/components/layout/Navbar";
@@ -19,7 +19,7 @@ export default function Home() {
 
                 {/* Placeholder Sections for Scroll Testing */}
 
-                <About />
+
 
                 <Gallery />
 

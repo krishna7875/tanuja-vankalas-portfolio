@@ -14,10 +14,7 @@ interface VideoModalProps {
 export function VideoModal({ video, isOpen, onClose }: VideoModalProps) {
     const [isLoaded, setIsLoaded] = useState(false);
 
-    // Reset loaded state when video changes
-    useEffect(() => {
-        setIsLoaded(false);
-    }, [video]);
+
 
     // Lock body scroll
     useEffect(() => {
